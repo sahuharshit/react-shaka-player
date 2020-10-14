@@ -13,9 +13,20 @@ class App extends Component {
     };
   }
 
+  startClipFour = () => {
+    this.setState({
+      urlToPlay: 'https://harshitsww.s3.eu-west-3.amazonaws.com/videoplayback.mp4'
+    });
+  }
+  startClipThree = () => {
+    this.setState({
+      urlToPlay: 'https://storage.googleapis.com/shaka-live-assets/player-source.m3u8'
+    });
+  }
+
   startClipTwo = () => {
     this.setState({
-      urlToPlay: 'https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd'
+      urlToPlay: 'https://harshitsww.s3.eu-west-3.amazonaws.com/file_example_MP4_1920_18MG.mp4'
     });
   }
 
@@ -36,8 +47,10 @@ class App extends Component {
           Click buttons below to pass new props to the player!
         </p>
 
-        <button onClick={this.startClipOne}>Start Clip One</button>
-        <button onClick={this.startClipTwo}>Start Clip Two</button>
+        <button onClick={this.startClipOne}>mpd Format</button>
+        <button onClick={this.startClipTwo}>17mb MP4 Video</button>
+        <button onClick={this.startClipThree}>HLS m3u8 Format</button>
+        <button onClick={this.startClipFour}>256mb MP4 Video</button>
         <Player url={this.state.urlToPlay} />
       </div>
     );

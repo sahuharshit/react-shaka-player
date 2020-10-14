@@ -57,10 +57,10 @@ class Player extends Component {
   render() {
     return (
       <div>
-        <h2>Player</h2>
+        <h2>Streaming HLS in clip 1 and DASH in clip 2</h2>
         <video ref="video"
           width="640"
-          poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+          poster="https://pbs.twimg.com/profile_images/1053055123193122816/IUwo6l_Q_400x400.jpg"
           controls autoPlay>
         </video>
       </div>
